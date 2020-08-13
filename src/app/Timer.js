@@ -47,7 +47,7 @@ class Timer extends Component {
                   <label className="timerLable">设置时间</label>
                   <input type="timerInput" onChange={(event) => this.setState({inputNumber:event.target.value})}></input>
                 </div>
-                <input type="button" id="1" value="Start" className="startButton" onClick={this.timerStart} />
+                <input type="button" id="1" value="Start" className="startButton" onClick={this.timerStart} disabled={this.state.timerStart}/>
               </div>
               {this.state.timerStart ? <span className="timerRunning">{this.state.timeLeft} Seconds</span> : <span className="timerRunning">{this.state.timeLeft}</span>}
             </div>
